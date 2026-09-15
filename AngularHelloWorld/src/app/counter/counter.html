@@ -1,0 +1,29 @@
+<h1>Counter</h1>
+<p>Print out the MyNumbers array</p>
+
+<!-- For Loop-->
+ <!-- Structural directive deprecated-->
+  <ul>
+    <li *ngFor="let n of myNumbers">
+        {{n}}
+    </li>
+  </ul>
+
+  <!-- new control flow-->
+   <ul>
+    @for (x of myNumbers; track x) {
+        <li>{{x}}</li>
+    }
+   </ul>
+
+   <ul>
+    @for (x of moreNumber; track x){
+        <li>{{x | currency }}</li>
+    }
+   </ul>
+
+    <ul>
+    @for (x of moreNumber; track x){
+        <li>{{x | number:'1.2-2' }}</li>
+    }
+   </ul>
