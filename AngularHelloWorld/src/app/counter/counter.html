@@ -27,3 +27,31 @@
         <li>{{x | number:'1.2-2' }}</li>
     }
    </ul>
+
+   <!--
+   1.minimun number of whole number digits
+   2.min number  of decimal digits
+   3.max number of decimal digits
+    -->
+
+    <ul>
+        @for(n of moreNumber; track n){
+            <li>{{n | percent:'1.2-2'}}</li>
+        }
+    </ul>
+
+    @if(myNumbers.length > 3){
+        <div>The numbers array length is greater than 3</div>
+    }@else{
+        <div>The numbers array length is not greater than 3</div>
+    }
+
+    <!--
+    depecrated way of doing the same thing
+    -->
+     <div *ngIf="myNumbers.length > 3">
+        The numbers array length is greater than 3
+     </div>
+     <div *ngIf="myNumbers.length <= 3">
+        The numbers array length is not greater than 3
+     </div>
